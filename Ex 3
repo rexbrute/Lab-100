@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int A;
+    int bat[100];
+    int tab[100];
+    int n,i,j=0;
+    printf("Introduceti marime tablou: ");
+    scanf("%d",&n);
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&tab[i]);
+    }
+    printf("Dati numarul A = ");
+    scanf("%d",&A);
+
+    for(i=0; i<=n; i++)
+    {
+        if (A<tab[i])
+        {
+            j++;
+            bat[j]=tab[i];
+        }
+    }
+    printf("\nSunt %d numere mai mari decat A",j);
+    printf("\nElementele sunt: ");
+    for(i=1; i<j; i++)
+    {
+        printf("\n%d",bat[i]);
+    };
+    return 0;
+}
