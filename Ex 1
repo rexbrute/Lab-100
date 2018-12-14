@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n;
+    int bez[100];
+    int i;
+    int max;
+    int min;
+    printf("Introduceti marime tablou: ");
+    scanf("%d",&n);
+    for(i=0; i<n; i++){
+        scanf("%d",&bez[i]);
+}
+min =bez[0];
+max =bez[0];
+for(i=0;i<n;i++){
+   if(max<bez[i])
+            max=bez[i];
+        if(min>bez[i])
+            min=bez[i];
+}
+    printf("\nMinim=%d",min);
+    printf("\nMaxim=%d",max);
+    return 0;
+}
