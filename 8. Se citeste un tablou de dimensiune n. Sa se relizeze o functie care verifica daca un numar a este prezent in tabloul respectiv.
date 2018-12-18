@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int tab[100];
+    int n,i,a;
+    scanf("%d",&n);
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&tab[i]);
+    }
+    printf("Introduceti numar: ");
+    scanf("%d",&a);
+    for(i=0; i<n; i++)
+    {
+        if(tab[i]==a)
+        {
+            printf("Avem numarul %d",a);
+        }
+
+    }
+
+
+    return 0;
+}
