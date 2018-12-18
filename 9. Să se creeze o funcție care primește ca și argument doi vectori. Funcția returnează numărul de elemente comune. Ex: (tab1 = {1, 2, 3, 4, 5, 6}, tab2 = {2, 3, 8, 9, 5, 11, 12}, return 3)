@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int tab1[10000];
+    int tab2[10000];
+    int k,n1,n2,i,sum=0;
+    printf("Number of elements in #1 vector: ");
+    scanf("%d",&n1);
+    for(i=0; i<n1; i++)
+    {
+        scanf("%d",&tab1[i]);
+    }
+    printf("Number of elements in #2 vector: ");
+    scanf("%d",&n2);
+    for(i=0; i<n2; i++)
+    {
+        scanf("%d",&tab2[i]);
+    }
+    if(n1<n2)
+    {
+        for(k=0; k<n2; k++)
+        {
+            for(i=0; i<n2; i++)
+            {
+                if(tab1[k]==tab2[i])
+                {
+                    sum++;
+                }
+            }
+        }
+
+    }
+    if(n2<n1)
+    {
+        for(i=0; i<n1; i++)
+        {
+            if(tab1[i]==tab2[i])
+            {
+                sum++;
+            }
+
+        }
+    }
+    printf("We have %d common elements",sum);
+
+
+
+    return 0;
+}
